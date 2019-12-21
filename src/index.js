@@ -54,7 +54,7 @@ class App extends React.Component {
         break;
       case "%":
         this.updateOperation("*");
-        value.holding = value.current;
+        value.holding = value.current === "0" ? value.holding : value.current;
         value.current = "0.01";
         this.updateOperation("*");
         this.equalsHandler("*");
@@ -83,12 +83,6 @@ class App extends React.Component {
       default:
         this.value = "Error";
     }
-
-    /*value.current = value.previous === "0" ? value.current : value.previous + value.current;
-    this.setState({
-      answer: value.current
-    });
-    */
   }
 
   operationHandler(operation) {
@@ -165,7 +159,6 @@ class App extends React.Component {
     } else if (op === "-") {
       value.holding += -value.current;
     } else if (op === "*") {
-      console.log("hi");
       value.holding *= value.current;
     } else if (op === "/") {
       if (value.current === 0 && this.state.operation !== "=") {
