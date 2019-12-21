@@ -1,10 +1,13 @@
 import React from "react";
 import { InputButton } from "/src/InputButton.js";
 import { OperationButton } from "/src/OperationButton.js";
+import { Answer } from "/src/Answer.js";
+
 export class ButtonPad extends React.Component {
   render() {
     return (
       <div className="w3-bar">
+        <Answer answer={this.props.answer} />
         <OperationButton
           value={"AC"}
           onClick={this.props.onNumber}

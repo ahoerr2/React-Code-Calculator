@@ -3,15 +3,19 @@
   text-align: center;
 }
 .Answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   padding: 0;
   background-color: black;
   color: white;
+  height: 45px;
   width: 60%;
 }
 .ButtonPad {
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 .w3-button {
   width: 15%;

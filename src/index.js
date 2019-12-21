@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Answer } from "/src/Answer.js";
 import { ButtonPad } from "./ButtonPad";
 import "./styles.css";
 import "./W3.css";
@@ -203,8 +202,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Code Calculator</h1>
-        <Answer answer={this.state.answer} />
-        <ButtonPad onNumber={this.changeAnswerHandler} />
+        <h4>By. Alex Hoerr</h4>
+
+        <ButtonPad
+          onNumber={this.changeAnswerHandler}
+          answer={this.state.answer}
+        />
       </div>
     );
   }
