@@ -9,12 +9,10 @@ export class OperationButton extends React.Component {
     this.props.onClick(answer);
   }
   render() {
+    let color = this.props.color === undefined ? "w3-red" : this.props.color;
+    let name = "w3-button w3-large " + color;
     return (
-      <button
-        className="w3-button w3-red w3-large"
-        type="button"
-        onClick={this.handleClick}
-      >
+      <button className={name} type="button" onClick={this.handleClick}>
         {this.props.value}
       </button>
     );
