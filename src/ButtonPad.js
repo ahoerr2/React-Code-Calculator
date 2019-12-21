@@ -1,7 +1,7 @@
 import React from "react";
-import { InputButton } from "/src/InputButton.js";
-import { OperationButton } from "/src/OperationButton.js";
-import { Answer } from "/src/Answer.js";
+import { InputButton } from "./InputButton.js";
+import { OperationButton } from "./OperationButton.js";
+import { Answer } from "./Answer.js";
 
 export class ButtonPad extends React.Component {
   render() {
